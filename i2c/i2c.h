@@ -12,6 +12,10 @@
 #include "stm32f10x.h"
 #include "config.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
 	uint32_t I2C_ClockSpeed;
 	uint16_t I2C_Ack;
@@ -21,5 +25,9 @@ typedef struct {
 
 ConfigResult configI2C1(I2CConfig * i2cConfig);
 ConfigResult configI2C2(I2CConfig * i2cConfig);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* I2C_H_ */

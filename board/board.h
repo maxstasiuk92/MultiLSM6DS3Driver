@@ -10,6 +10,10 @@
 #include <stdint.h>
 #include "config.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 ConfigResult setSwdPinsUsed();
 ConfigResult setHsePinsUsed();
 
@@ -19,5 +23,9 @@ void blueLedCtrl(uint8_t state);
 
 ConfigResult configButtonForPolling();
 uint8_t isButtonPushed();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* BOARD_H_ */

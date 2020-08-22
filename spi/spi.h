@@ -9,6 +9,10 @@
 #define SPI_H_
 #include "config.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
 	uint16_t SPI_CPHA;
 	uint16_t SPI_CPOL;
@@ -30,5 +34,9 @@ ConfigResult configSPI2AsMaster(SPIConfig * spiConfig);
 								DMA_SetCurrDataCounter(DMA1_Channel5, byteNum);\
 								DMA_Cmd(DMA1_Channel4, ENABLE);\
 								DMA_Cmd(DMA1_Channel5, ENABLE);}while(0)
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* SPI_H_ */

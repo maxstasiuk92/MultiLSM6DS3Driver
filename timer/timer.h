@@ -8,6 +8,10 @@
 #ifndef TIMER_H_
 #define TIMER_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 ConfigResult configPwm1ToCtrlBridge(uint16_t period);
 
 ConfigResult configPwm1ToCtrl2Drivers(uint16_t period);
@@ -17,5 +21,9 @@ ConfigResult configPwm3ToCtrlBridge(uint16_t period);
 
 ConfigResult configTimer2(uint16_t period);
 ConfigResult configTimer4(uint16_t period);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* TIMER_H_ */

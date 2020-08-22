@@ -12,6 +12,14 @@
 #include "usedExtiLines.h"
 #include "usedPins.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void initUsedPeriphMonitor();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* USEDPERIPHMONITOR_H_ */

@@ -66,7 +66,7 @@ void configSpiForLSM6DS3(){
 	spiConfig.SPI_CPOL = SPI_CPOL_High;
 	spiConfig.SPI_FirstBit = SPI_FirstBit_MSB;
 	spiConfig.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_64;
-	spiConfig.buffer = spiBuff;
+	spiConfig.buffer = (uint8_t *)spiBuff;
 	loopIfConfigFails(configSPI2AsMaster(&spiConfig));
 	//PB11 - CSN
 	pinInitStruct.GPIO_Pin=GPIO_Pin_11;
@@ -110,7 +110,7 @@ int main(){
 	readData(WHO_AM_I, b, 1);*/
 
 	AccelerometerConfig ac;
-	ac.odr = 10; //A_ODR_13;
+	ac.odr = A_ODR_13;
 
 	for(;;);
 }

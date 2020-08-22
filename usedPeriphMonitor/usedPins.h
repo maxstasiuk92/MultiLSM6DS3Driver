@@ -2,6 +2,10 @@
 #define _used_pins_h_
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void initUsedPinsStruct();
 
 uint16_t getUsedPinsInGPIOA();
@@ -15,5 +19,9 @@ void setUsedPinsInGPIOC(uint16_t pins);
 void setUsedPinsInGPIOD(uint16_t pins);
 
 void pullUpUnusedPins();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif //_used_pins_h_
